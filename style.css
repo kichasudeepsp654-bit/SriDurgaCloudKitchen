@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     scroll-behavior:smooth;
 }
 
@@ -15,18 +15,18 @@ body{
 /* Header */
 
 header{
-    background:#0b5d2a;
+    background:#0b6b2f;
     color:#fff;
     text-align:center;
-    padding:40px 20px;
+    padding:45px 20px;
 }
 
 .logo{
-    width:120px;
-    height:120px;
-    object-fit:cover;
+    width:110px;
+    height:110px;
     border-radius:50%;
     border:4px solid #fff;
+    object-fit:cover;
     margin-bottom:15px;
 }
 
@@ -49,7 +49,7 @@ header p{
 }
 
 .hero h2{
-    color:#0b5d2a;
+    color:#0b6b2f;
     font-size:42px;
     margin-bottom:15px;
 }
@@ -57,7 +57,7 @@ header p{
 .hero p{
     color:#555;
     font-size:20px;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
 /* Buttons */
@@ -68,30 +68,30 @@ header p{
     color:#fff;
     text-decoration:none;
     padding:14px 28px;
-    margin:8px;
-    border-radius:10px;
+    border-radius:8px;
     font-size:18px;
     font-weight:bold;
+    margin:8px;
     transition:.3s;
 }
 
 .btn:hover{
     background:#e65c00;
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
 /* Sections */
 
 section{
     max-width:1100px;
-    margin:40px auto;
+    margin:35px auto;
     padding:20px;
 }
 
 section h2{
-    color:#0b5d2a;
-    font-size:34px;
     text-align:center;
+    color:#222;
+    font-size:34px;
     margin-bottom:25px;
 }
 
@@ -112,41 +112,46 @@ section h2{
 
 .card img{
     width:100%;
-    border-radius:15px;
+    border-radius:12px;
     margin-bottom:15px;
 }
 
 .card h3{
-    color:#0b5d2a;
-    margin-bottom:10px;
+    color:#222;
     text-align:center;
+    margin-bottom:10px;
 }
 
 .card p{
+    color:#555;
     text-align:center;
 }
 
-/* Weekly image */
+/* Weekly Menu */
 
 .full{
     width:100%;
     border-radius:15px;
 }
 
-/* Plan Box */
+/* FAQ / Plans */
 
 .plan{
     background:#fff;
-    border-left:5px solid #ff6b00;
-    border-radius:12px;
+    border-left:5px solid #ff9800;
     padding:18px;
+    border-radius:12px;
     margin:15px 0;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 .plan h3{
-    color:#0b5d2a;
+    color:#d84315;
     margin-bottom:10px;
+}
+
+.plan p{
+    color:#555;
 }
 
 /* Lists */
@@ -157,24 +162,6 @@ ul{
 
 li{
     margin:10px 0;
-}
-
-/* Gallery */
-
-#gallery{
-    text-align:center;
-}
-
-#gallery .card{
-    display:inline-block;
-    width:300px;
-    margin:15px;
-}
-
-#gallery img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
 }
 
 /* Contact Form */
@@ -189,17 +176,29 @@ textarea,
 select{
     width:100%;
     padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
+    border:1px solid #ddd;
     border-radius:8px;
-    font-size:16px;
+    margin:10px 0;
+}
+
+/* Gallery */
+
+#gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+#gallery .card{
+    width:300px;
 }
 
 /* Footer */
 
-.footer,
-footer{
-    background:#0b5d2a;
+footer,
+.footer{
+    background:#0b6b2f;
     color:#fff;
     text-align:center;
     padding:35px 20px;
@@ -208,7 +207,10 @@ footer{
 
 .footer h3{
     color:#ffd54f;
-    margin-bottom:10px;
+}
+
+.footer p{
+    color:#eee;
 }
 
 /* Floating WhatsApp */
@@ -220,7 +222,7 @@ footer{
     background:#25D366;
     color:#fff;
     text-decoration:none;
-    padding:16px 22px;
+    padding:16px 24px;
     border-radius:50px;
     font-weight:bold;
     box-shadow:0 5px 15px rgba(0,0,0,.3);
@@ -228,7 +230,7 @@ footer{
 }
 
 .whatsapp:hover{
-    background:#1fa855;
+    background:#1ea952;
 }
 
 /* Responsive */
@@ -236,7 +238,7 @@ footer{
 @media(max-width:768px){
 
 header{
-    padding:30px 15px;
+    padding:35px 15px;
 }
 
 .logo{
@@ -245,11 +247,19 @@ header{
 }
 
 header h1{
-    font-size:28px;
+    font-size:30px;
+}
+
+header p{
+    font-size:16px;
+}
+
+.hero{
+    padding:45px 15px;
 }
 
 .hero h2{
-    font-size:24px;
+    font-size:28px;
 }
 
 .hero p{
@@ -257,9 +267,14 @@ header h1{
 }
 
 .btn{
-    display:block;
-    width:90%;
-    margin:10px auto;
+    width:45%;
+    display:inline-block;
+    padding:12px;
+    font-size:16px;
+}
+
+section{
+    padding:15px;
 }
 
 section h2{
@@ -274,4 +289,10 @@ section h2{
     width:100%;
 }
 
+.whatsapp{
+    right:12px;
+    bottom:12px;
+    padding:14px 18px;
+    font-size:15px;
+}
 }
