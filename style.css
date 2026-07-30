@@ -1,3 +1,29 @@
+#rewards{
+  background:#fff8e1;
+  padding:25px;
+  margin:30px 0;
+  border-radius:12px;
+}
+
+.plan{
+  background:#ffffff;
+  padding:15px;
+  margin:15px 0;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.plan h3{
+  color:#d35400;
+}
+
+#rewards ul{
+  padding-left:20px;
+}
+
+#rewards li{
+  margin:8px 0;
+}
 body{
 margin:0;
 font-family:Arial,sans-serif;
