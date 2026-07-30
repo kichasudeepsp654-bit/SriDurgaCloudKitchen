@@ -97,3 +97,22 @@ text-align:center;
 padding:20px;
 margin-top:30px;
 }
+#why-us{
+  background:#f8fff3;
+  padding:25px;
+  margin:30px 0;
+  border-radius:12px;
+  text-align:center;
+}
+
+#why-us .plan{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+#why-us p{
+  font-size:18px;
+  margin:10px 0;
+  }
