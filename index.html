@@ -31,16 +31,43 @@ function sendWhatsApp() {
 📍 Address:
 ${address}`;
 
-    let url = "https://wa.me/918431071610?text=" + encodeURIComponent(message);
+    let url = "https://wa.me/919620483135?text=" + encodeURIComponent(message);
 
     window.location.href = url;
 }
 </script>
+  <script>
+function getLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(function(position){
+
+let lat=position.coords.latitude;
+let lng=position.coords.longitude;
+
+document.getElementById("address").value=
+"https://maps.google.com/?q="+lat+","+lng;
+
+},function(){
+
+alert("Please allow location access.");
+
+});
+
+}else{
+
+alert("Geolocation is not supported.");
+
+}
+
+}
+  </script>
 <body>
 <div id="loader">
     <div class="spinner"></div>
 </div>
-<a href="https://wa.me/918431071610" class="whatsapp" target="_blank">
+<a href="https://wa.me/919620483135" class="whatsapp" target="_blank">
   💬 Order on WhatsApp
 </a>
 
@@ -55,7 +82,7 @@ ${address}`;
   <p>Healthy Homemade Meals Delivered Fresh Every Day</p>
 
   <a href="tel:8431071610" class="btn">📞 Call Now</a>
-  <a href="https://wa.me/918431071610" class="btn">💬 WhatsApp</a>
+  <a href="https://wa.me/919620483134" class="btn">💬 WhatsApp</a>
 </section>
   <section class="slider">
     <div class="slides">
@@ -84,7 +111,7 @@ ${address}`;
     document.getElementById("todayMenu").innerHTML = menus[day];
     </script>
 
-    <a href="https://wa.me/918431071610" class="btn">
+    <a href="https://wa.me/919620483134" class="btn">
         📲 Order Now
     </a>
 </section>
@@ -191,7 +218,7 @@ ${address}`;
   <p>💬 WhatsApp: +91 9620483134</p>
   <p>🕛 Delivery Time: 12:30 PM – 3:00 PM</p>
 
-  <a href="https://wa.me/918431071610" class="btn">
+  <a href="https://wa.me/919620483134" class="btn">
     🍛 Order on WhatsApp
   </a>
 </section>
@@ -236,7 +263,9 @@ ${address}`;
 <input id="qty" type="number" placeholder="Quantity" min="1" required>
 
 <button class="btn" type="submit">🍛 Place Order</button>
-
+<button type="button" class="btn" onclick="getLocation()">
+📍 Use My Current Location
+</button>
   </form>
   </section>
 <section id="faq" class="card">
