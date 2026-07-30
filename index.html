@@ -11,6 +11,34 @@ window.addEventListener("load",function(){
     document.getElementById("loader").style.display="none";
 });
 </script>
+  <script>
+function sendWhatsApp(){
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let address = document.getElementById("address").value;
+let meal = document.getElementById("meal").value;
+let qty = document.getElementById("qty").value;
+
+let message =
+`🍛 *New Order - Sri Durga Cloud Kitchen*
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+
+🍽️ Meal: ${meal}
+🔢 Quantity: ${qty}
+
+📍 Address:
+${address}
+
+Please confirm my order. Thank you! 😊`;
+
+let url = "https://wa.me/918431071610?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+}
+  </script>
 <body>
 <div id="loader">
     <div class="spinner"></div>
