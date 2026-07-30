@@ -30,6 +30,10 @@ function sendWhatsApp() {
 
 📍 Address:
 ${address}`;
+  
+💳 Payment Method: ${payment}
+
+🧾 Transaction ID: ${txn}`;
 
     let url = "https://wa.me/919620483134?text=" + encodeURIComponent(message);
 
@@ -266,6 +270,17 @@ alert("Geolocation is not supported.");
 <button type="button" class="btn" onclick="getLocation()">
 📍 Use My Current Location
 </button>
+    <h3>💳 Payment Method</h3>
+
+<select id="payment" required>
+    <option value="">Select Payment Method</option>
+    <option value="Cash on Delivery">💵 Cash on Delivery</option>
+    <option value="UPI Payment">📱 UPI Payment</option>
+</select>
+
+<input type="text"
+       id="txn"
+       placeholder="Enter UPI Transaction ID (Only for UPI)">
   </form>
   </section>
 <section id="faq" class="card">
