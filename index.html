@@ -1,399 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sri Durga Cloud Kitchen</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Durga Cloud Kitchen</title>
+<link rel="stylesheet" href="style.css">
+
 <script>
 window.addEventListener("load",function(){
-    document.getElementById("loader").style.display="none";
+document.getElementById("loader").style.display="none";
 });
-</script>
-  <script>
-function sendWhatsApp() {
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let address = document.getElementById("address").value;
-    let meal = document.getElementById("meal").value;
-    let qty = document.getElementById("qty").value;
-    let payment = document.getElementById("payment").value;
-let txn = document.getElementById("txn").value;
 
-let message =
-`🍛 *New Order - Sri Durga Cloud Kitchen*
-
-👤 Name: ${name}
-📞 Phone: ${phone}
-
-🍽️ Meal: ${meal}
-🔢 Quantity: ${qty}
-
-📍 Address:
-${address}
-
-💳 Payment Method: ${payment}
-
-🧾 Transaction ID: ${txn}`;
-
-    let url = "https://wa.me/919620483134?text=" + encodeURIComponent(message);
-
-    window.location.href = url;
-}
-</script>
-  <script>
 function getLocation(){
-
 if(navigator.geolocation){
-
 navigator.geolocation.getCurrentPosition(function(position){
-
 let lat=position.coords.latitude;
 let lng=position.coords.longitude;
-
 document.getElementById("address").value=
 "https://maps.google.com/?q="+lat+","+lng;
-
 },function(){
-
 alert("Please allow location access.");
-
 });
-
-}else{
-
-alert("Geolocation is not supported.");
-
+}
 }
 
+function sendWhatsApp(){
+
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+let meal=document.getElementById("meal").value;
+let qty=document.getElementById("qty").value;
+let payment=document.getElementById("payment").value;
+let txn=document.getElementById("txn").value;
+
+let message=
+`🍛 *New Order - Sri Durga Cloud Kitchen*
+
+👤 Name : ${name}
+📞 Phone : ${phone}
+
+🍽 Meal : ${meal}
+🔢 Quantity : ${qty}
+
+📍 Address :
+${address}
+
+💳 Payment : ${payment}
+
+🧾 Transaction ID :
+${txn}`;
+
+window.open(
+"https://wa.me/919620483134?text="+encodeURIComponent(message),
+"_blank");
 }
-  </script>
+</script>
+
+</head>
+
 <body>
+
 <div id="loader">
-    <div class="spinner"></div>
+<div class="spinner"></div>
 </div>
-<a href="https://wa.me/919620483134" class="whatsapp" target="_blank">
-  💬 Order on WhatsApp
+
+<a href="https://wa.me/919620483134"
+class="whatsapp"
+target="_blank">
+💬 Order on WhatsApp
 </a>
 
 <header>
-  <img src="logo.png" class="logo" alt="Sri Durga Cloud Kitchen Logo">
-  <h1>Sri Durga Cloud Kitchen</h1>
-  <p>Fresh • Hygienic • Homemade Food</p>
+
+<img src="logo.png"
+class="logo"
+alt="Logo">
+
+<h1>Sri Durga Cloud Kitchen</h1>
+
+<p>
+Fresh • Hygienic • Homemade Food
+</p>
+
 </header>
 
 <section class="hero">
-  <h2>Welcome to Sri Durga Cloud Kitchen</h2>
-  <p>Healthy Homemade Meals Delivered Fresh Every Day</p>
 
-  <a href="tel:8431071610" class="btn">📞 Call Now</a>
+<h2>
+Welcome to Sri Durga Cloud Kitchen
+</h2>
+
+<p>
+Healthy Homemade Meals Delivered Fresh Every Day
+</p>
+
+<a href="tel:8431071610"
+class="btn">
+📞 Call Now
+</a>
+
 </section>
-  <section class="slider">
-    <div class="slides">
-        <img src="slider1.jpg" alt="Food 1">
-        <img src="slider2.jpg" alt="Food 2">
-        <img src="slider3.jpg" alt="Food 3">
-    </div>
-  </section>
+
+<section class="slider">
+
+<div class="slides">
+
+<img src="slider1.jpg">
+
+<img src="slider2.jpg">
+
+<img src="slider3.jpg">
+
+</div>
+
+</section>
+
 <section id="today" class="card">
-    <h2>🔥 Today's Special</h2>
 
-    <h3 id="todayMenu"></h3>
+<h2>🔥 Today's Special</h2>
 
-    <script>
-    const menus = {
-      0:"🌞 Sunday - Holiday",
-      1:"🍛 Monday - Mudde and chapathi meal",
-      2:"🫓 Tuesday - Mudde and Chapati Meal",
-      3:"🍚 Wednesday - Mudde and chapathi Meal",
-      4:"🍲 Thursday - Mudde and chapathi Meal",
-      5:"🎉 Friday - Pulao & Obbattu Meal",
-      6:"🍋 Saturday - Mudde and Chapathi Meal"
-    };
+<h3 id="todayMenu"></h3>
 
-    const day = new Date().getDay();
-    document.getElementById("todayMenu").innerHTML = menus[day];
-    </script>
+<script>
 
-    <a href="https://wa.me/919620483134" class="btn">
-        📲 Order Now
-    </a>
+const menus={
+
+0:"🌞 Sunday - Holiday",
+
+1:"🍛 Monday - Mudde & Chapati Meal",
+
+2:"🫓 Tuesday - Mudde & Chapati Meal",
+
+3:"🍚 Wednesday - Mudde & Chapati Meal",
+
+4:"🍲 Thursday - Mudde & Chapati Meal",
+
+5:"🎉 Friday - Pulao & Obbattu Meal",
+
+6:"🍋 Saturday - Mudde & Chapati Meal"
+
+};
+
+document.getElementById("todayMenu").innerHTML=
+menus[new Date().getDay()];
+
+</script>
+
+<a href="#order"
+class="btn">
+📲 Order Now
+</a>
+
 </section>
+
 <section class="offer">
-    <h2>🎉 Today's Offer</h2>
-    <p>🍛 Free Delivery on Orders Above ₹299</p>
-    <p>🎁 Monthly Subscribers Get Special Discounts</p>
-</section>
-  <section class="rating card">
-    <h2>⭐ Customer Rating</h2>
 
-    <h1 style="font-size:60px;color:#ff9800;">4.9 ★</h1>
+<h2>🎉 Today's Offer</h2>
 
-    <p style="font-size:20px;">
-        Rated by Happy Customers
-    </p>
+<p>
+🍛 Free Delivery Above ₹299
+</p>
 
-    <p style="font-size:28px;color:#ffc107;">
-        ⭐⭐⭐⭐⭐
-    </p>
+<p>
+🎁 Monthly Subscribers Get Special Discounts
+</p>
 
-    <a href="https://g.page/r/" class="btn" target="_blank">
-        ⭐ Rate Us on Google
-    </a>
-  </section>
-  <a href="https://wa.me/919620483134" class="btn">
-    📲 Order Now
-  </a>
 </section>
 <section>
-  <h2>🍽 Our Menu</h2>
+<h2>🍽 Our Menu</h2>
 
-  <div class="card">
-    <img src="mudde.jpg" alt="Mudde Meal">
-    <h3>Mudde Meal</h3>
-    <p>₹129 (With Egg)</p>
-    <p>₹119 (Without Egg)</p>
-  </div>
+<div class="card">
+<img src="mudde.jpg" alt="Mudde Meal">
+<h3>Mudde Meal</h3>
+<p>₹129 (With Egg)</p>
+<p>₹119 (Without Egg)</p>
+</div>
 
-  <div class="card">
-    <img src="chapati.jpg" alt="Chapati Meal">
-    <h3>Chapati Meal</h3>
-    <p>₹129 (With Egg)<p>
-    <p>₹119 (Without Egg)<p>
-    <p>Healthy Homemade Meal</p>
-  </div>
+<div class="card">
+<img src="chapati.jpg" alt="Chapati Meal">
+<h3>Chapati Meal</h3>
+<p>₹129 (With Egg)</p>
+<p>₹119 (Without Egg)</p>
+</div>
 
-  <div class="card">
-    <img src="friday.jpg" alt="Friday Special">
-    <h3>Friday Special</h3>
-    <p>Pulao & Obbattu Special</p>
-  </div>
+<div class="card">
+<img src="friday.jpg" alt="Friday Special">
+<h3>Friday Special</h3>
+<p>Pulao & Obbattu Special</p>
+</div>
+
 </section>
+
 <section>
-  <h2>📅 Weekly Menu</h2>
-  <img src="weekly.jpg" class="full" alt="Weekly Menu">
+<h2>📅 Weekly Menu</h2>
+
+<img src="weekly.jpg" class="full" alt="Weekly Menu">
+
 </section>
+
 <section id="gallery">
-  <h2>📸 Food Gallery</h2>
 
-  <div class="card">
-    <img src="mudde.jpg" alt="Mudde Meal">
-  </div>
+<h2>📸 Food Gallery</h2>
 
-  <div class="card">
-    <img src="chapati.jpg" alt="Chapati Meal">
-  </div>
+<div class="card">
+<img src="mudde.jpg">
+</div>
 
-  <div class="card">
-    <img src="friday.jpg" alt="Friday Special">
-  </div>
+<div class="card">
+<img src="chapati.jpg">
+</div>
 
-  <div class="card">
-    <img src="mudde.jpg" alt="Healthy Meal">
-  </div>
+<div class="card">
+<img src="friday.jpg">
+</div>
 
-  <div class="card">
-    <img src="chapati.jpg" alt="Homemade Food">
-  </div>
+<div class="card">
+<img src="mudde.jpg">
+</div>
 
-  <div class="card">
-    <img src="friday.jpg" alt="Special Meal">
-  </div>
+<div class="card">
+<img src="chapati.jpg">
+</div>
+
+<div class="card">
+<img src="friday.jpg">
+</div>
+
 </section>
-  <section id="payment" class="card">
-    <h2>💳 UPI QR Code Payment</h2>
 
-    <img src="upi-qr.png" alt="UPI QR Code" class="qr">
-
-    <p><b>Scan & Pay</b></p>
-    <p>PhonePe • Google Pay • Paytm • BHIM UPI</p>
-
-    <a href="upi://pay?pa=8431071610-2@ybl&pn=Sri%20Durga%20Cloud%20Kitchen"
-       class="btn">
-       💳 Pay Now
-    </a>
-  </section>
 <section id="contact" class="card">
-  <h2>📞 Contact Us</h2>
 
-  <p><strong>Sri Durga Cloud Kitchen</strong></p>
-  <p>📍 B T Koppalu, Near RTO Office, Arsikere Main Road, Hassan</p>
-  <p>📞 Phone: +91 8431071610</p>
-  <p>💬 WhatsApp: +91 9620483134</p>
-  <p>🕛 Delivery Time: 12:30 PM – 3:00 PM</p>
+<h2>📞 Contact Us</h2>
 
-  <a href="https://wa.me/919620483134" class="btn">
-    🍛 Order on WhatsApp
-  </a>
+<p><strong>Sri Durga Cloud Kitchen</strong></p>
+
+<p>
+📍 B T Koppalu,
+Near RTO Office,
+Arsikere Main Road,
+Hassan
+</p>
+
+<p>📞 8431071610</p>
+
+<p>💬 WhatsApp : 9620483134</p>
+
+<p>🕛 Delivery Time : 12:30 PM - 3:00 PM</p>
+
+<a href="#order" class="btn">
+🍛 Place Order
+</a>
+
 </section>
+
 <section id="location" class="card">
-  <h2>📍 Our Location</h2>
 
-  <p><strong>Sri Durga Cloud Kitchen</strong></p>
-  <p>B T Koppalu, Near RTO Office, Arsikere Main Road, Hassan</p>
+<h2>📍 Our Address</h2>
 
-  <iframe
-    src="https://www.google.com/maps?q=Hassan,Karnataka&output=embed"
-    width="100%"
-    height="300"
-    style="border:0;border-radius:12px;"
-    loading="lazy">
-  </iframe>
+<p><strong>Sri Durga Cloud Kitchen</strong></p>
 
-  <br><br>
+<p>
+B T Koppalu<br>
+Near RTO Office<br>
+Arsikere Main Road<br>
+Hassan - 573201<br>
+Karnataka
+</p>
 
-  <a href="https://maps.google.com/?q=Hassan,Karnataka" class="btn" target="_blank">
-    📍 Open in Google Maps
-  </a>
 </section>
-  <section id="order" class="card">
-  <h2>📝 Place Your Order</h2>
+<section id="order" class="card">
 
-  <form onsubmit="sendWhatsApp(); return false;">
+<h2>📝 Place Your Order</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
 
 <input id="name" type="text" placeholder="Your Name" required>
 
 <input id="phone" type="tel" placeholder="Mobile Number" required>
 
-<textarea id="address" placeholder="Delivery Address" required></textarea>
+<textarea id="address" placeholder="Delivery Address" rows="4" required></textarea>
 
-<select id="meal" required>
-    <option value="">Select Meal</option>
-    <option>Mudde Meal</option>
-    <option>Chapati Meal</option>
-    <option>Friday Special</option>
-</select>
-
-<input id="qty" type="number" placeholder="Quantity" min="1" required>
-
-<button class="btn" type="submit">🍛 Place Order</button>
 <button type="button" class="btn" onclick="getLocation()">
 📍 Use My Current Location
 </button>
-    <h3>💳 Payment Method</h3>
 
-<select id="payment" required>
-    <option value="">Select Payment Method</option>
-    <option value="Cash on Delivery">💵 Cash on Delivery</option>
-    <option value="UPI Payment">📱 UPI Payment</option>
+<select id="meal" required>
+<option value="">Select Meal</option>
+<option>Mudde Meal</option>
+<option>Chapati Meal</option>
+<option>Friday Special</option>
 </select>
 
-<input type="text"
-       id="txn"
-       placeholder="Enter UPI Transaction ID (Only for UPI)">
-  </form>
-  </section>
+<input id="qty" type="number" min="1" placeholder="Quantity" required>
+
+<h3>💳 Payment Method</h3>
+
+<select id="payment" required>
+<option value="">Select Payment Method</option>
+<option>💵 Cash on Delivery</option>
+<option>📱 UPI Payment</option>
+</select>
+
+<input id="txn" type="text"
+placeholder="UPI Transaction ID (Only if Paid by UPI)">
+
+<button class="btn" type="submit">
+🍛 Place Order
+</button>
+
+</form>
+
+</section>
+
 <section id="faq" class="card">
-  <h2>❓ Frequently Asked Questions</h2>
+<h2>❓ Frequently Asked Questions</h2>
 
-  <div class="plan">
-    <h3>🍱 What meals do you serve?</h3>
-    <p>We serve Mudde Meal, Chapati Meal and Friday Special Meals.</p>
-  </div>
+<div class="plan">
+<h3>🍱 Meals Available?</h3>
+<p>Mudde Meal, Chapati Meal and Friday Special.</p>
+</div>
 
-  <div class="plan">
-    <h3>🕛 What is the delivery time?</h3>
-    <p>12:30 PM – 3:00 PM</p>
-  </div>
+<div class="plan">
+<h3>🕛 Delivery Time?</h3>
+<p>12:30 PM – 3:00 PM</p>
+</div>
 
-  <div class="plan">
-    <h3>📅 Is Monthly Subscription Available?</h3>
-    <p>Yes, Monthly Subscription Plans are available.</p>
-  </div>
+<div class="plan">
+<h3>💳 Payment?</h3>
+<p>Cash on Delivery & UPI Payment.</p>
+</div>
 
-  <div class="plan">
-    <h3>💳 Payment Methods?</h3>
-    <p>UPI & Cash Accepted.</p>
-  </div>
+<div class="plan">
+<h3>📅 Monthly Plans?</h3>
+<p>Available.</p>
+</div>
 
-  <div class="plan">
-    <h3>📱 How to Order?</h3>
-    <p>Order easily through WhatsApp or Phone Call.</p>
-  </div>
-</section>
-<section id="plans" class="card">
-  <h2>📅 Monthly Subscription Plans</h2>
-
-  <div class="plan">
-    <h3>🥉 Basic Plan</h3>
-    <p>1 Month</p>
-    <p>₹3500</p>
-  </div>
-
-  <div class="plan">
-    <h3>🥈 Standard Plan</h3>
-    <p>3 Months</p>
-    <p>₹9900</p>
-  </div>
-
-  <div class="plan">
-    <h3>🥇 Premium Plan</h3>
-    <p>6 Months</p>
-    <p>₹19200</p>
-  </div>
-</section>
-
-<section id="rewards" class="card">
-  <h2>🎁 Customer Rewards Program</h2>
-
-  <p>⭐ Every Meal Order = 10 Points</p>
-  <p>👥 Refer a Friend = 100 Points</p>
-  <p>📅 Monthly Plan Renewal = 200 Points</p>
-  <p>⭐ Google Review = 50 Points</p>
-
-  <h3>🎉 Redeem Rewards</h3>
-  <p>500 Points = ₹50 OFF</p>
-  <p>1000 Points = ₹150 OFF</p>
-  <p>2000 Points = Free Special Meal</p>
 </section>
 
 <section id="reviews" class="card">
-  <h2>⭐ Customer Reviews</h2>
 
-  <div class="plan">
-    <h3>⭐⭐⭐⭐⭐ Ravi Kumar</h3>
-    <p>"Very tasty and hygienic food. Feels like home."</p>
-  </div>
+<h2>⭐ Customer Reviews</h2>
 
-  <div class="plan">
-    <h3>⭐⭐⭐⭐⭐ Priya</h3>
-    <p>"Fresh food every day. Highly recommended."</p>
-  </div>
+<div class="plan">
+<h3>⭐⭐⭐⭐⭐ Ravi Kumar</h3>
+<p>"Very tasty and hygienic food."</p>
+</div>
 
-  <div class="plan">
-    <h3>⭐⭐⭐⭐⭐ Manju</h3>
-    <p>"Best cloud kitchen in Hassan. Great quality."</p>
-  </div>
+<div class="plan">
+<h3>⭐⭐⭐⭐⭐ Priya</h3>
+<p>"Feels like homemade food."</p>
+</div>
+
+<div class="plan">
+<h3>⭐⭐⭐⭐⭐ Manju</h3>
+<p>"Best cloud kitchen in Hassan."</p>
+</div>
+
 </section>
 
 <section id="why-us" class="card">
-  <h2>🌿 Why Choose Sri Durga Cloud Kitchen?</h2>
 
-  <div class="plan">
-    <p>🍲 Freshly Cooked Every Day</p>
-    <p>🏠 Authentic Home Style Taste</p>
-    <p>🥗 Hygienic & Healthy Food</p>
-    <p>🌾 Quality Ingredients</p>
-    <p>⏰ Timely Delivery</p>
-    <p>💰 Affordable Pricing</p>
-    <p>❤️ Made With Love & Care</p>
-  </div>
+<h2>🌿 Why Choose Us?</h2>
+
+<div class="plan">
+
+<p>🍛 Fresh Homemade Food</p>
+
+<p>🥗 Hygienic Kitchen</p>
+
+<p>⏰ On Time Delivery</p>
+
+<p>💰 Affordable Price</p>
+
+<p>❤️ Made With Love</p>
+
+</div>
+
 </section>
+
 <footer class="footer">
-  <h3>Sri Durga Cloud Kitchen</h3>
-  <p>🍛 Fresh • Hygienic • Homemade Food</p>
-  <p>📞 +91 8431071610</p>
-  <p>📍 B T Koppalu, Near RTO Office, Arsikere Main Road, Hassan</p>
-  <p>🕛 Delivery Time: 12:30 PM – 3:00 PM</p>
 
-  <a href="https://wa.me/919620483134" class="btn">
-    💬 Order Now on WhatsApp
-  </a>
+<h3>Sri Durga Cloud Kitchen</h3>
 
-  <br><br>
+<p>Fresh • Hygienic • Homemade</p>
 
-  <p>© 2026 Sri Durga Cloud Kitchen. All Rights Reserved.</p>
+<p>📞 +91 8431071610</p>
+
+<p>
+📍 B T Koppalu,
+Near RTO Office,
+Arsikere Main Road,
+Hassan
+</p>
+
+<a href="#order" class="btn">
+🍛 Place Order
+</a>
+
+<p>
+© 2026 Sri Durga Cloud Kitchen.
+All Rights Reserved.
+</p>
+
 </footer>
 
 </body>
