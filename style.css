@@ -349,3 +349,22 @@ section h2{
     font-size:18px;
     margin:8px 0;
 }
+.rating{
+    text-align:center;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+}
+
+.rating h2{
+    color:#0b5d2a;
+}
+
+.rating h1{
+    margin:10px 0;
+}
+
+.rating p{
+    margin:10px 0;
+}
