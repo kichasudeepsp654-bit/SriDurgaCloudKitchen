@@ -7,7 +7,7 @@
 }
 
 body{
-    background:#f7f4eb;
+    background:#f8f5ed;
     color:#333;
     line-height:1.6;
 }
@@ -15,7 +15,7 @@ body{
 /* Header */
 
 header{
-    background:#156b2d;
+    background:#0b5d2a;
     color:#fff;
     text-align:center;
     padding:45px 20px;
@@ -64,7 +64,7 @@ header p{
 
 .btn{
     display:inline-block;
-    background:#ff6b00;
+    background:#ff6600;
     color:#fff;
     text-decoration:none;
     padding:14px 28px;
@@ -198,7 +198,7 @@ select{
 
 footer,
 .footer{
-    background:#0b6b2f;
+    background:#0b5b2a;
     color:#fff;
     text-align:center;
     padding:35px 20px;
