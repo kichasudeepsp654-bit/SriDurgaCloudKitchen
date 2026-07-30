@@ -165,3 +165,18 @@ margin-top:30px;
 #faq h3{
   color:#d35400;
 }
+.footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+.footer h3{
+    color:#ffcc00;
+}
+
+.footer p{
+    margin:8px 0;
+}
