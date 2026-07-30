@@ -12,33 +12,30 @@ window.addEventListener("load",function(){
 });
 </script>
   <script>
-function sendWhatsApp(){
+function sendWhatsApp() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+    let meal = document.getElementById("meal").value;
+    let qty = document.getElementById("qty").value;
 
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let address = document.getElementById("address").value;
-let meal = document.getElementById("meal").value;
-let qty = document.getElementById("qty").value;
-
-let message =
+    let message =
 `🍛 *New Order - Sri Durga Cloud Kitchen*
 
 👤 Name: ${name}
-📞 Phone: ${phone}
+📞 Mobile: ${phone}
 
 🍽️ Meal: ${meal}
 🔢 Quantity: ${qty}
 
 📍 Address:
-${address}
+${address}`;
 
-Please confirm my order. Thank you! 😊`;
+    let url = "https://wa.me/918431071610?text=" + encodeURIComponent(message);
 
-let url = "https://wa.me/918431071610?text=" + encodeURIComponent(message);
-
-window.open(url, "_blank");
+    window.location.href = url;
 }
-  </script>
+</script>
 <body>
 <div id="loader">
     <div class="spinner"></div>
@@ -221,12 +218,11 @@ window.open(url, "_blank");
   <section id="order" class="card">
   <h2>📝 Place Your Order</h2>
 
-  <form>
   <form onsubmit="sendWhatsApp(); return false;">
 
-<input type="text" id="name" placeholder="Your Name" required>
+<input id="name" type="text" placeholder="Your Name" required>
 
-<input type="tel" id="phone" placeholder="Mobile Number" required>
+<input id="phone" type="tel" placeholder="Mobile Number" required>
 
 <textarea id="address" placeholder="Delivery Address" required></textarea>
 
@@ -237,9 +233,9 @@ window.open(url, "_blank");
     <option>Friday Special</option>
 </select>
 
-<input type="number" id="qty" placeholder="Quantity" min="1" required>
+<input id="qty" type="number" placeholder="Quantity" min="1" required>
 
-<button type="submit" class="btn">🍛 Place Order</button>
+<button class="btn" type="submit">🍛 Place Order</button>
 
   </form>
   </section>
