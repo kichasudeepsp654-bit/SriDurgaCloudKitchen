@@ -147,3 +147,21 @@ margin-top:30px;
 .whatsapp:hover{
   background:#1da851;
 }
+#faq{
+  background:#f7f7f7;
+  padding:25px;
+  margin:30px 0;
+  border-radius:12px;
+}
+
+#faq .plan{
+  background:#fff;
+  padding:15px;
+  margin:15px 0;
+  border-radius:10px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+#faq h3{
+  color:#d35400;
+}
