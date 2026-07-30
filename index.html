@@ -39,20 +39,30 @@ window.addEventListener("load",function(){
         <img src="slider3.jpg" alt="Food 3">
     </div>
   </section>
-<section id="today-special" class="card">
-  <h2>🔥 Today's Special</h2>
+<section id="today" class="card">
+    <h2>🔥 Today's Special</h2>
 
-  <img src="today-special.jpg" class="full" alt="Today's Special">
+    <h3 id="todayMenu"></h3>
 
-  <h3>🍛 Mudde Meal Special</h3>
+    <script>
+    const menus = {
+      0:"🌞 Sunday - Chicken Special",
+      1:"🍛 Monday - Mudde Meal",
+      2:"🫓 Tuesday - Chapati Meal",
+      3:"🍚 Wednesday - Veg Meals",
+      4:"🍲 Thursday - Sambar Rice",
+      5:"🎉 Friday - Pulao & Obbattu",
+      6:"🍋 Saturday - Lemon Rice Special"
+    };
 
-  <p>🥣 Ragi Mudde</p>
-  <p>🍲 Sambar</p>
-  <p>🥬 Fresh Palya</p>
-  <p>🥚 1 Boiled Egg</p>
-  <p>🍌 Banana</p>
+    const day = new Date().getDay();
+    document.getElementById("todayMenu").innerHTML = menus[day];
+    </script>
 
-  <h2 style="color:#d32f2f;">₹129 Only</h2>
+    <a href="https://wa.me/918431071610" class="btn">
+        📲 Order Now
+    </a>
+</section>
 <section class="offer">
     <h2>🎉 Today's Offer</h2>
     <p>🍛 Free Delivery on Orders Above ₹299</p>
