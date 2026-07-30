@@ -222,20 +222,25 @@ window.open(url, "_blank");
   <h2>📝 Place Your Order</h2>
 
   <form>
-    <input type="text" placeholder="Your Name" required><br><br>
+  <form onsubmit="sendWhatsApp(); return false;">
 
-    <input type="tel" placeholder="Mobile Number" required><br><br>
+<input type="text" id="name" placeholder="Your Name" required>
 
-    <textarea placeholder="Delivery Address" rows="4" required></textarea><br><br>
+<input type="tel" id="phone" placeholder="Mobile Number" required>
 
-    <select required>
-      <option>Select Meal</option>
-      <option>Mudde Meal</option>
-      <option>Chapati Meal</option>
-      <option>Friday Special</option>
-    </select><br><br>
+<textarea id="address" placeholder="Delivery Address" required></textarea>
 
-    <button type="submit" class="btn">🍛 Place Order</button>
+<select id="meal" required>
+    <option value="">Select Meal</option>
+    <option>Mudde Meal</option>
+    <option>Chapati Meal</option>
+    <option>Friday Special</option>
+</select>
+
+<input type="number" id="qty" placeholder="Quantity" min="1" required>
+
+<button type="submit" class="btn">🍛 Place Order</button>
+
   </form>
   </section>
 <section id="faq" class="card">
