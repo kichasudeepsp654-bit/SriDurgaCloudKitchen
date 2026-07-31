@@ -447,3 +447,15 @@ section{
 #payment{
     text-align:center;
 }
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:50%;
+object-fit:cover;
+}
